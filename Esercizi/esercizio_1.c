@@ -7,7 +7,16 @@ void termina(char *messaggio){
     exit(1);
 }
 
-void inserisci(int **a, int *size, int *messi, int insrt){
+bool contiene(int a[], int size, int k){
+    for(int i = 0; i < size; i++){
+        if(a[i] == k){
+            return true;
+        }
+    }
+    return false;
+}
+
+void inserisci(int *a[], int *size, int *messi, int insrt){
     if(*messi == *size){
         *size *= 2;
         *a = realloc(*a, *size * sizeof(int));

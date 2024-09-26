@@ -1,4 +1,6 @@
 Base := gcc -std=c99 -Wall -g -O -o 
 
+Current_File := ./Lezioni/L3.c
+
 compile: 
-	$(Base) primi ./Esercizi/esercizio_1.c
+	$(Base) ./Compiled/test $(Current_File)
